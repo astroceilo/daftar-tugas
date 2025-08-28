@@ -11,25 +11,28 @@ Fitur Aplikasi
 - Pembaruan Status dengan Ajax: Status tugas (selesai/belum selesai) dapat diperbarui secara dinamis menggunakan Ajax tanpa me-refresh halaman.
 
 Teknologi yang Digunakan
-Framework: CodeIgniter 4
-Database: MySQL
-DataTables: Untuk menampilkan data tugas dalam format tabel yang dinamis.
-Ajax: Untuk operasi CRUD (Create, Read, Update, Delete) yang dinamis tanpa memuat ulang halaman.
-Template: Penggunaan template dashboard seperti AdminLTE atau Sb Admin untuk tampilan.
-Lainnya: JavaScript dan jQuery digunakan untuk menangani permintaan Ajax dan memperbarui tampilan secara dinamis.
+
+- Framework: CodeIgniter 4
+- Database: MySQL
+- Libraries :
+  - DataTables: Untuk menampilkan data tugas dalam format tabel yang dinamis.
+  - Ajax: Untuk operasi CRUD (Create, Read, Update, Delete) yang dinamis tanpa memuat ulang halaman.
+- Template: Penggunaan template dashboard seperti AdminLTE atau Sb Admin untuk tampilan.
+- Lainnya: JavaScript dan jQuery digunakan untuk menangani permintaan Ajax dan memperbarui tampilan secara dinamis.
 
 Struktur Database
 Aplikasi ini menggunakan database MySQL. Silakan buat tabel bernama tasks dengan kolom-kolom berikut:
-id: int, auto_increment, primary key
-judul: varchar
-status: tinyint (0 untuk belum selesai, 1 untuk selesai)
+
+- id: int, auto_increment, primary key
+- judul: varchar
+- status: tinyint (0 untuk belum selesai, 1 untuk selesai)
 
 Cara Pemasangan
 
-- Pastikan Anda telah menginstal framework CodeIgniter 4 dan mengatur koneksi database MySQL di file konfigurasi.
-- Lakukan kloning (clone) repositori ini ke dalam direktori lokal Anda.
-- Impor struktur tabel tasks ke database MySQL Anda.
-- Jalankan aplikasi melalui server lokal Anda.
+1. Pastikan Anda telah menginstal framework CodeIgniter 4 dan mengatur koneksi database MySQL di file konfigurasi.
+2. Lakukan kloning (clone) repositori ini ke dalam direktori lokal Anda.
+3. Impor struktur tabel tasks ke database MySQL Anda.
+4. Jalankan aplikasi melalui server lokal Anda.
 
 Penggunaan
 
