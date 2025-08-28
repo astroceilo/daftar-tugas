@@ -1,68 +1,39 @@
-# CodeIgniter 4 Application Starter
+Aplikasi Daftar Tugas Sederhana
+Aplikasi ini adalah daftar tugas sederhana yang dibuat menggunakan CodeIgniter 4, MySQL, Ajax, dan DataTables. Aplikasi ini memungkinkan pengguna untuk membuat, melihat, mengedit, dan menghapus tugas.
 
-## What is CodeIgniter?
+Fitur Aplikasi
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+- Halaman Utama: Menampilkan daftar tugas dalam bentuk tabel interaktif menggunakan library DataTables. Setiap tugas memiliki judul, status (selesai/belum selesai), dan tombol aksi. Kolom status ditandai secara visual dengan kotak centang (checkbox).
+- Tambah Tugas: Pengguna dapat menambahkan tugas baru melalui sebuah formulir yang hanya membutuhkan input judul tugas. Fitur
+- Ajax digunakan untuk menyimpan tugas baru tanpa perlu memuat ulang halaman.
+- Edit Tugas: Pengguna dapat mengedit tugas yang sudah ada melalui form yang dapat mengubah judul dan status tugas.
+- Hapus Tugas: Terdapat fungsi untuk menghapus tugas dari daftar.
+- Pembaruan Status dengan Ajax: Status tugas (selesai/belum selesai) dapat diperbarui secara dinamis menggunakan Ajax tanpa me-refresh halaman.
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+Teknologi yang Digunakan
+Framework: CodeIgniter 4
+Database: MySQL
+DataTables: Untuk menampilkan data tugas dalam format tabel yang dinamis.
+Ajax: Untuk operasi CRUD (Create, Read, Update, Delete) yang dinamis tanpa memuat ulang halaman.
+Template: Penggunaan template dashboard seperti AdminLTE atau Sb Admin untuk tampilan.
+Lainnya: JavaScript dan jQuery digunakan untuk menangani permintaan Ajax dan memperbarui tampilan secara dinamis.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+Struktur Database
+Aplikasi ini menggunakan database MySQL. Silakan buat tabel bernama tasks dengan kolom-kolom berikut:
+id: int, auto_increment, primary key
+judul: varchar
+status: tinyint (0 untuk belum selesai, 1 untuk selesai)
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+Cara Pemasangan
 
-## Installation & updates
+- Pastikan Anda telah menginstal framework CodeIgniter 4 dan mengatur koneksi database MySQL di file konfigurasi.
+- Lakukan kloning (clone) repositori ini ke dalam direktori lokal Anda.
+- Impor struktur tabel tasks ke database MySQL Anda.
+- Jalankan aplikasi melalui server lokal Anda.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Penggunaan
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
-
-## Setup
-
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.1 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - If you are still using PHP 7.4 or 8.0, you should upgrade immediately.
-> - The end of life date for PHP 8.1 will be December 31, 2025.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- Halaman utama akan menampilkan semua tugas yang tersimpan di database.
+- Gunakan modal tambah tugas untuk memasukkan tugas baru.
+- Gunakan tombol aksi yang tersedia di setiap baris tabel untuk mengedit atau menghapus tugas.
+- Klik pada checkbox untuk mengubah status tugas menjadi selesai atau belum selesai secara instan.
